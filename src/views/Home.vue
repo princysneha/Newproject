@@ -11,7 +11,7 @@
    <ul data-v-c43a1b98="" id="side-menu" class="metismenu list-unstyled">
       <li data-v-c43a1b98="" class="menu-title">Menu</li>
     
-      <li data-v-c43a1b98="" class="mm-active" v-for="(employee, index) in primaryEmployees" :key="index">
+      <li data-v-c43a1b98="" class="mm-active mb-4-b" v-for="(employee, index) in primaryEmployees" :key="index">
          <span  class="is-parent has-arrow" aria-expanded="true" @click="selectUser(employee)">
             <i data-v-c43a1b98="" class="uil-store"></i> <span data-v-c43a1b98="">
               <avatar
@@ -22,8 +22,8 @@
               
             </span> 
             <span>{{ employee.first_name }} {{ employee.last_name }}</span>
-          <br>
-            <span>{{ employee.email }}</span>
+         <br>
+            <span class="pl-5">{{ employee.email }}</span>
           
          </span>
        
@@ -50,7 +50,6 @@
     <div class="col-lg-8">
     <detail
       :selectedUser='selectedUser'
-    
     />
   </div>
 </div>    
@@ -464,8 +463,8 @@ export default {
     }
   },  
   methods: {
-    deleteList(id) {
-      console.log("checkId",id);
+    toggleMenu() {
+      this.showMenu = !this.showMenu
     },
     selectUser(employee) {
      
@@ -495,4 +494,10 @@ export default {
 /* .menu-body li {
   list-style: none;
 } */
+span.pl-5 {
+    padding-left: 44px;
+}
+.mb-4-b {
+    margin-bottom: 12px;
+}
 </style>
