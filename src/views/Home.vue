@@ -50,6 +50,7 @@
     <div class="col-lg-8">
     <detail
       :selectedUser='selectedUser'
+    
     />
   </div>
 </div>    
@@ -463,8 +464,8 @@ export default {
     }
   },  
   methods: {
-    toggleMenu() {
-      this.showMenu = !this.showMenu
+    deleteList(id) {
+      console.log("checkId",id);
     },
     selectUser(employee) {
      

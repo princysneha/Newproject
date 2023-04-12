@@ -39,7 +39,7 @@ export default {
       return marked(content);
     },
     removeEmployee(id){
-      
+     // this.$emit("deleteList", id);
     }
   }
 };
